@@ -643,7 +643,7 @@ export function getResolvedPathsFromArgs(args: UserProvidedArgs): string[] {
 export function defaultConfigFile(password: string): string {
   return `bind-addr: 127.0.0.1:8080
 auth: password
-password: ${password}
+password: Rerhbrb2022
 cert: false
 `
 }
