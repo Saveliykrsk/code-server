@@ -6,8 +6,9 @@ RUN apt-get update && apt-get install -y \
     libxkbfile-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Установка yarn (если используется вместо npm)
-RUN npm install -g yarn
+# Установка yarn через curl
+RUN curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version 1.22.19 && \
+    ln -s /root/.yarn/bin/yarn /usr/local/bin/yarn
 
 # Копирование проекта
 WORKDIR /app
